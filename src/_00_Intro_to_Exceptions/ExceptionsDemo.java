@@ -1,5 +1,7 @@
 package _00_Intro_to_Exceptions;
 
+import javax.swing.JOptionPane;
+
 public class ExceptionsDemo {
 
     /*
@@ -39,6 +41,31 @@ public class ExceptionsDemo {
     public static void main(String[] args) {
 
         // 1. Create a try/catch block (Hint: type "try" and ctrl + space).
+try {
+	testFiveOrGreater(4);
+} catch (Exception e) {
+e.printStackTrace();
+}
+
+try {
+	testPositive(-1);
+} catch (NegativeNumberException e) {
+	e.scaryPopup();
+} finally {
+	
+	JOptionPane.showMessageDialog(null, "jk the computer is ok");
+	
+}
+    }
+    
+    	
+//     / \
+//    | | |
+//    \ \ /
+//    / \ \
+//    | | |
+//	   \ /
+
 
         /*
          * 2. Call the testFiveOrGreater method with a value less than 5 inside
@@ -53,7 +80,7 @@ public class ExceptionsDemo {
 
         // 4. Run the program. Did the stack trace print out?
 
-    }
+    
 
     /*
      * 5. Create your own exception by making a new class called
@@ -87,6 +114,13 @@ public class ExceptionsDemo {
      * 
      * 10. Try running the program. Did it show a pop-up?
      */
+
+static void testPositive(int i) throws NegativeNumberException {
+	if (i < 0) {
+		throw new NegativeNumberException();
+	}
+	
+}
 
     /*
      * 11. Add a finally block after your catch block(Hint: finally{}). A
