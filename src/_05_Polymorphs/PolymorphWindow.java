@@ -49,7 +49,7 @@ import javax.swing.Timer;
  *  interface.
  * 
  * 15. Create a Polymorph that displays a JOptionPane Message Dialog when
- *  clicked. Hint: MouseListener interface.
+ *  clicked. Hint: MouseListener interface.a
  */
 
 public class PolymorphWindow extends JPanel implements ActionListener {
