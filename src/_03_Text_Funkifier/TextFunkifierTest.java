@@ -44,6 +44,7 @@ public class TextFunkifierTest {
 
     @Test
     public void testCustomString() {
-
+        AllDashString mcs = new AllDashString("This is definitely a test");
+        assertEquals("-------------------------", mcs.funkifyText());
     }
 }
