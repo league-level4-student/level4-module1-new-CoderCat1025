@@ -43,7 +43,7 @@ public class HospitalTest extends TestCase {
 
     public void testAddPatient() throws Exception {
         testHospital.addPatient(new Patient());
-        testHospital.addPatient(new Patient());
+        testHospital.addPatient(new Patient());        
         testHospital.addPatient(new Patient());
         assertEquals(3, testHospital.getPatients().size());
     }
@@ -108,6 +108,19 @@ public class HospitalTest extends TestCase {
 
     // Add 3 Doctors and 8 Patients to the testHospital for this test
     public void test8Patients() throws Exception {
+    	
+        testHospital.addDoctor(new GeneralPractitioner());
+        testHospital.addDoctor(new GeneralPractitioner());
+        testHospital.addDoctor(new Surgeon());
+        
+        testHospital.addPatient(new Patient());
+        testHospital.addPatient(new Patient());
+        testHospital.addPatient(new Patient());
+        testHospital.addPatient(new Patient());
+        testHospital.addPatient(new Patient());
+        testHospital.addPatient(new Patient());
+        testHospital.addPatient(new Patient());
+        testHospital.addPatient(new Patient());
 
         testHospital.assignPatientsToDoctors();
 
